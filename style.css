@@ -1,0 +1,124 @@
+/* Importação de fonte opcional do Google Fonts para um visual melhor */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset básico e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Fundo de gradiente azul (similar ao que é comum em apps de clima) */
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 400px; /* Limita a largura do cartão */
+    padding: 20px;
+}
+
+/* Estilo do cartão principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Branco transparente */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ------------------ */
+/* Seção de Pesquisa */
+/* ------------------ */
+.box-large {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#cidade {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#cidade:focus {
+    border-color: #4facfe;
+    outline: none;
+}
+
+#img-pesquisa {
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    background-color: #4facfe;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#img-pesquisa:hover {
+    background-color: #3b90d8;
+    transform: scale(1.05);
+}
+
+/* ------------------ */
+/* Dados do Clima */
+/* ------------------ */
+
+#nome-cidade {
+    font-size: 2rem; /* 32px */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#temperatura {
+    font-size: 4rem; /* 64px */
+    font-weight: 700;
+    color: #4facfe;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+#umidade {
+    font-size: 1.1rem; /* 18px */
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Seção de Previsão e Ícone */
+.box-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#previsao {
+    font-size: 1.2rem; /* 20px */
+    font-weight: 600;
+    color: #333;
+    /* Centraliza verticalmente com o ícone, se necessário */
+    align-self: center; 
+}
+
+#img-icon {
+    width: 90px; /* Tamanho do ícone */
+    height: 90px;
+}
